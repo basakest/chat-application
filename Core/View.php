@@ -26,6 +26,13 @@ class View
         }
     }
 
+    /**
+     * echo the view file
+     *
+     * @param [type] $template
+     * @param array $args
+     * @return void
+     */
     public static function renderTemplate($template, $args = [])
     {
         static $twig = null;
