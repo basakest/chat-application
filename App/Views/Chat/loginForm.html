@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+{% block body %}
+    <div id="loginform">
+        <form action="/chat/login" method="post">
+            <p>Please enter your name to continue:</p>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" />
+            <button type="submit">Enter</button>
+        </form>
+    </div>
+{% endblock %}
+

@@ -67,4 +67,19 @@ abstract class Controller
     {
 
     }
+
+    /**
+     * redirect to another page
+     *
+     * @param [string] $url
+     * @return void
+     */
+    public function redirect($url)
+    {
+        header('Location: http://' . $_SERVER['HTTP_HOST'] . $url, true, 303);
+        exit();
+        /*
+        this is because once a redirect header has been set, any content sent after that won't be output. What was happening was at some point the flash messages were being retrieved, but not displayed, then the redirect occurred and the flash messages were lost on the next page.
+        */
+    } 
 }
